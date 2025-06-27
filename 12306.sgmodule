@@ -1,8 +1,8 @@
 #!name=12306去开屏
-#!desc=仍需要手动跳过
+#!desc=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js
 
-[Body Rewrite]
-http-response-jq ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList '{   "message": "无广告返回",   "code": "00" }'
+[Script]
+12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js, requires-body=true, max-size=-1, timeout=60
 
 [MITM]
 hostname = %APPEND% ad.12306.cn
