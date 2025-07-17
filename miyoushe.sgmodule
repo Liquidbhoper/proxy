@@ -5,6 +5,7 @@
 http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppSplash '.data = "Blocked"'
 http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/window\/prepare '.data = "Blocked"'
 http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/window\/show '.data = "Blocked"'
+http-response-jq ^https:\/\/bbs-api\.miyoushe\.com\/apihub\/api\/getAppStartupData 'walk(   if type == "object" and .is_show_teenager_mode_btn == "1"   then .is_show_teenager_mode_btn = "0"   else . end )'
 
 [MITM]
 hostname = %APPEND% bbs-api.miyoushe.com
