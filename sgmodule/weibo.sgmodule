@@ -1,0 +1,6 @@
+#!name=微博去开屏
+#!desc=可能需要卸载重装
+
+[Rule]
+URL-REGEX,^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime$,REJECT
+URL-REGEX,^https:\/\/bootpreload\.uve\.weibo\.com\/v2\/ad\/preload$,REJECT

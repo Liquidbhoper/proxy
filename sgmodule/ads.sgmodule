@@ -1,0 +1,30 @@
+#!name=拦截广告联盟
+#!desc=自用收集
+
+[Rule]
+DOMAIN,xlog.jd.com,REJECT,pre-matching
+DOMAIN-SUFFIX,ubixioe.com,REJECT,pre-matching // 优比客思
+DOMAIN-SUFFIX,aiclk.com,REJECT,pre-matching // 聚艺媒
+DOMAIN,mobads-pre-config.cdn.bcebos.com,REJECT,pre-matching // 百度
+DOMAIN,afd.baidu.com,REJECT,pre-matching
+DOMAIN,mobads-logs.baidu.com,REJECT,pre-matching // 百度广告
+DOMAIN,ssp.1rtb.com,REJECT,pre-matching // 内部调用
+DOMAIN-KEYWORD,zijieapi,REJECT,pre-matching
+DOMAIN-SUFFIX,adukwai.com,REJECT-DROP,pre-matching,extended-matching // 快手广告
+DOMAIN,adsmind.ugdtimg.com,REJECT,pre-matching
+DOMAIN,mobads.baidu.com,REJECT,pre-matching
+DOMAIN-KEYWORD,-toutiao,REJECT,pre-matching
+DOMAIN-SUFFIX,e.kuaishou.com,REJECT,pre-matching
+DOMAIN,apimobile.meituan.com,REJECT,pre-matching
+DOMAIN-SUFFIX,e.kuaishou.cn,REJECT,pre-matching
+DOMAIN,sdk.e.qq.com,REJECT,pre-matching
+DOMAIN,im-x.jd.com,REJECT,pre-matching
+DOMAIN,als.baidu.com,REJECT,pre-matching
+DOMAIN-SUFFIX,gifshow.com,REJECT,pre-matching
+DOMAIN,bgg.baidu.com,REJECT,pre-matching
+DOMAIN,sofire.baidu.com,REJECT,pre-matching
+DOMAIN,mantis.bayescom.com,REJECT,pre-matching
+DOMAIN,sdk.1rtb.net,REJECT,pre-matching
+DOMAIN,toblog.ctobsnssdk.com,REJECT,pre-matching
+DOMAIN-SUFFIX,douyinpic.com,REJECT,pre-matching
+

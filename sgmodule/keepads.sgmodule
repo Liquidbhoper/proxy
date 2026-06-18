@@ -1,0 +1,16 @@
+#!name=Keep去广告
+#!desc=需要卸载重装
+
+[Rule]
+URL-REGEX,^https:\/\/static1\.keepcdn\.com\/ark_optimus\/.*,REJECT-DROP // keep jpg
+DOMAIN,ssp-sdk-config.uc.cn,REJECT
+DOMAIN-SUFFIX,hpplay.cn,REJECT,pre-matching // 乐播广告
+URL-REGEX,^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/tool\/v1\/jump\/popup$,REJECT // keep跳转
+URL-REGEX,^https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad\?.*,REJECT // keep ad
+DOMAIN-SUFFIX,sm.cn,REJECT,pre-matching,extended-matching // keep神马搜索
+URL-REGEX,^https:\/\/api\.gotokeep\.com\/op-engine-webapp\/v1\/configs$,REJECT // keep开屏
+DOMAIN-SUFFIX,uczzd.cn,REJECT,pre-matching // uc开放平台
+DOMAIN-SUFFIX,miaozhen.com,REJECT,pre-matching // 秒针推广
+
+[MITM]
+hostname = %APPEND% static1.keepcdn.com,kad.gotokeep.com
